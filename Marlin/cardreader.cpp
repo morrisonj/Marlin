@@ -151,16 +151,16 @@ void CardReader::initsd()
     root.close();
 #ifdef SDSLOW
   if (!card.init(SPI_HALF_SPEED,SDSS)
-  #if defined(MB_SDSS) && (MB_SDSS != SDSS)
-    && !card.init(SPI_HALF_SPEED,MB_SDSS)
+  #if defined(LCD_SDSS) && (LCD_SDSS != SDSS)
+    && !card.init(SPI_HALF_SPEED,LCD_SDSS)
   #endif
-     )
+  )
 #else
   if (!card.init(SPI_FULL_SPEED,SDSS)
-  #if defined(MB_SDSS) && (MB_SDSS != SDSS)
-    && !card.init(SPI_FULL_SPEED,MB_SDSS)
+  #if defined(LCD_SDSS) && (LCD_SDSS != SDSS)
+    && !card.init(SPI_FULL_SPEED,LCD_SDSS)
   #endif
-     )
+  )
 #endif
   {
     //if (!card.init(SPI_HALF_SPEED,SDSS))

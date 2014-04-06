@@ -123,7 +123,7 @@
 // 11 is Epcos B57560G104F 100K
 // 12 is Epcos B57861S104F40 100K 155C for bed only
 // 20 is the PT100 circuit found in the Ultimainboard V2.x
-// 60 is 100k Maker's Tool Works Kapton Bed Thermistor
+// 60 is 100k Maker's Tool Works Kapton Bed Thermistor beta=3950
 //
 //    1k ohm pullup tables - This is not normal, you would have to have changed out your 4.7k for 1k
 //                          (but gives greater accuracy and more stable PID)

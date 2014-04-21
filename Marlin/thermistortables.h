@@ -564,6 +564,63 @@ const short temptable_10[][2] PROGMEM = {
 };
 #endif
 
+#if (THERMISTORHEATER_0 == 11) || (THERMISTORHEATER_1 == 11) || (THERMISTORHEATER_2 == 11) || (THERMISTORBED == 11) 
+// QU-BD silicone bed QWG-104F-3950 thermistor
+
+const short temptable_11[][2] PROGMEM = {
+         {1*OVERSAMPLENR,        938},
+         {31*OVERSAMPLENR,       314},
+         {41*OVERSAMPLENR,       290},
+         {51*OVERSAMPLENR,       272},
+         {61*OVERSAMPLENR,       258},
+         {71*OVERSAMPLENR,       247},
+         {81*OVERSAMPLENR,       237},
+         {91*OVERSAMPLENR,       229},
+         {101*OVERSAMPLENR,      221},
+         {111*OVERSAMPLENR,      215},
+         {121*OVERSAMPLENR,      209},
+         {131*OVERSAMPLENR,      204},
+         {141*OVERSAMPLENR,      199},
+         {151*OVERSAMPLENR,      195},
+         {161*OVERSAMPLENR,      190},
+         {171*OVERSAMPLENR,      187},
+         {181*OVERSAMPLENR,      183},
+         {191*OVERSAMPLENR,      179},
+         {201*OVERSAMPLENR,      176},
+         {221*OVERSAMPLENR,      170},
+         {241*OVERSAMPLENR,      165},
+         {261*OVERSAMPLENR,      160},
+         {281*OVERSAMPLENR,      155},
+         {301*OVERSAMPLENR,      150},
+         {331*OVERSAMPLENR,      144},
+         {361*OVERSAMPLENR,      139},
+         {391*OVERSAMPLENR,      133},
+         {421*OVERSAMPLENR,      128},
+         {451*OVERSAMPLENR,      123},
+         {491*OVERSAMPLENR,      117},
+         {531*OVERSAMPLENR,      111},
+         {571*OVERSAMPLENR,      105},
+         {611*OVERSAMPLENR,      100},
+         {641*OVERSAMPLENR,      95},
+         {681*OVERSAMPLENR,      90},
+         {711*OVERSAMPLENR,      85},
+         {751*OVERSAMPLENR,      79},
+         {791*OVERSAMPLENR,      72},
+         {811*OVERSAMPLENR,      69},
+         {831*OVERSAMPLENR,      65},
+         {871*OVERSAMPLENR,      57},
+         {881*OVERSAMPLENR,      55},
+         {901*OVERSAMPLENR,      51},
+         {921*OVERSAMPLENR,      45},
+         {941*OVERSAMPLENR,      39},
+         {971*OVERSAMPLENR,      28},
+         {981*OVERSAMPLENR,      23},
+         {991*OVERSAMPLENR,      17},
+         {1001*OVERSAMPLENR,     9},
+         {1021*OVERSAMPLENR,     -27}
+};
+#endif
+
 #if (THERMISTORHEATER_0 == 20) || (THERMISTORHEATER_1 == 20) || (THERMISTORHEATER_2 == 20) || (THERMISTORBED == 20) // PT100 with INA826 amp on Ultimaker v2.0 electronics
 /* The PT100 in the Ultimaker v2.0 electronics has a high sample value for a high temperature.
 This does not match the normal thermistor behaviour so we need to set the following defines */
@@ -636,8 +693,8 @@ const short temptable_20[][2] PROGMEM = {
 };
 #endif
 
-#if (THERMISTORHEATER_0 == 11) || (THERMISTORHEATER_1 == 11) || (THERMISTORHEATER_2 == 11) || (THERMISTORBED == 11) // Epcos B57560G104F 100K on JHeadMKV
-const short temptable_11[][2] PROGMEM = {
+#if (THERMISTORHEATER_0 == 12) || (THERMISTORHEATER_1 == 12) || (THERMISTORHEATER_2 == 12) || (THERMISTORBED == 12) // Epcos B57560G104F 100K on JHeadMKV
+const short temptable_12[][2] PROGMEM = {
     {     344,       300     }, // r=   101 adc=21.47
     {     369,       295     }, // r=   108 adc=23.08
     {     397,       290     }, // r=   117 adc=24.83
@@ -702,8 +759,8 @@ const short temptable_11[][2] PROGMEM = {
 };
 #endif
 
-#if (THERMISTORHEATER_0 == 12) || (THERMISTORHEATER_1 == 12) || (THERMISTORHEATER_2 == 12) || (THERMISTORBED == 12) // Epcos B57861S 104F 40 100K on Mendel90 bed, max temp 115
-const short temptable_12[][2] PROGMEM = {
+#if (THERMISTORHEATER_0 == 13) || (THERMISTORHEATER_1 == 13) || (THERMISTORHEATER_2 == 13) || (THERMISTORBED == 13) // Epcos B57861S 104F 40 100K on Mendel90 bed, max temp 115
+const short temptable_13[][2] PROGMEM = {
     {     982,       200     }, // r=   300 adc=61.38
     {    1091,       195     }, // r=   336 adc=68.19
     {    1214,       190     }, // r=   376 adc=75.84

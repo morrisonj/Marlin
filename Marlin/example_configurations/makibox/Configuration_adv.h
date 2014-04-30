@@ -30,7 +30,7 @@
 
 //automatic temperature: The hot end target temperature is calculated by all the buffered lines of gcode.
 //The maximum buffered steps/sec of the extruder motor are called "se".
-//You enter the autotemp mode by a M109 S<mintemp> B<maxtemp> F<factor>
+//You enter the autotemp mode by a M109 S<mintemp> T<maxtemp> F<factor>
 // the target temperature is set to mintemp+factor*se[steps/sec] and limited by mintemp and maxtemp
 // you exit the value by any M109 without F*
 // Also, if the temperature is set to a value <mintemp, it is not changed by autotemp.
@@ -99,9 +99,9 @@
   //X axis
   #if X_HOME_DIR == -1
     #ifdef BED_CENTER_AT_0_0
-      #define X_HOME_POS (X_MAX_LENGTH * -0.5) - 1
+      #define X_HOME_POS X_MAX_LENGTH * -0.5
     #else
-      #define X_HOME_POS (X_MIN_POS - 1)
+      #define X_HOME_POS X_MIN_POS
     #endif //BED_CENTER_AT_0_0
   #else
     #ifdef BED_CENTER_AT_0_0
@@ -114,9 +114,9 @@
   //Y axis
   #if Y_HOME_DIR == -1
     #ifdef BED_CENTER_AT_0_0
-      #define Y_HOME_POS (Y_MAX_LENGTH * -0.5) - 1
+      #define Y_HOME_POS Y_MAX_LENGTH * -0.5
     #else
-      #define Y_HOME_POS (Y_MIN_POS - 1)
+      #define Y_HOME_POS Y_MIN_POS
     #endif //BED_CENTER_AT_0_0
   #else
     #ifdef BED_CENTER_AT_0_0
@@ -130,7 +130,7 @@
   #if Z_HOME_DIR == -1 //BED_CENTER_AT_0_0 not used
     #define Z_HOME_POS Z_MIN_POS
   #else
-    #define Z_HOME_POS Z_HEIGHT_MM
+    #define Z_HOME_POS Z_MAX_POS
   #endif //Z_HOME_DIR == -1
 #endif //End auto min/max positions
 //END AUTOSET LOCATIONS OF LIMIT SWITCHES -ZP
@@ -213,12 +213,12 @@
 #endif //DUAL_X_CARRIAGE
 
 //homing hits the endstop, then retracts by this distance, before it tries to slowly bump again:
-#define X_HOME_RETRACT_MM 2
-#define Y_HOME_RETRACT_MM 2
-#define Z_HOME_RETRACT_MM 1
-#define QUICK_HOME  //if this is defined, if both x and y are to be homed, a diagonal move will be performed initially.
+#define X_HOME_RETRACT_MM 5
+#define Y_HOME_RETRACT_MM 5
+#define Z_HOME_RETRACT_MM 2
+//#define QUICK_HOME  //if this is defined, if both x and y are to be homed, a diagonal move will be performed initially.
 
-#define AXIS_RELATIVE_MODES {false, false, false, true}
+#define AXIS_RELATIVE_MODES {false, false, false, false}
 
 #define MAX_STEP_FREQUENCY 40000 // Max step frequency for Ultimaker (5000 pps / half step)
 
@@ -229,7 +229,7 @@
 #define INVERT_E_STEP_PIN false
 
 //default stepper release if idle
-#define DEFAULT_STEPPER_DEACTIVE_TIME 0
+#define DEFAULT_STEPPER_DEACTIVE_TIME 60
 
 #define DEFAULT_MINIMUMFEEDRATE       0.0     // minimum feedrate
 #define DEFAULT_MINTRAVELFEEDRATE     0.0
@@ -276,9 +276,10 @@
 // uncomment to enable an I2C based DIGIPOT like on the Azteeg X3 Pro
 //#define DIGIPOT_I2C
 // Number of channels available for I2C digipot, For Azteeg X3 Pro we have 8
-#define DIGIPOT_I2C_NUM_CHANNELS 8
+#define DIGIPOT_I2C_NUM_CHANNELS 4
 // actual motor currents in Amps, need as many here as DIGIPOT_I2C_NUM_CHANNELS
-#define DIGIPOT_I2C_MOTOR_CURRENTS {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0}
+//#define DIGIPOT_I2C_MOTOR_CURRENTS {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0}
+#define DIGIPOT_I2C_MOTOR_CURRENTS {1.7, 1.7, 1.7, 1.7}
 
 //===========================================================================
 //=============================Additional Features===========================

@@ -693,8 +693,8 @@ const short temptable_20[][2] PROGMEM = {
 };
 #endif
 
-#if (THERMISTORHEATER_0 == 12) || (THERMISTORHEATER_1 == 12) || (THERMISTORHEATER_2 == 12) || (THERMISTORBED == 12) // Epcos B57560G104F 100K on JHeadMKV
-const short temptable_12[][2] PROGMEM = {
+#if (THERMISTORHEATER_0 == 30) || (THERMISTORHEATER_1 == 30) || (THERMISTORHEATER_2 == 30) || (THERMISTORBED == 30) // Epcos B57560G104F 100K on JHeadMKV
+const short temptable_30[][2] PROGMEM = {
     {     344,       300     }, // r=   101 adc=21.47
     {     369,       295     }, // r=   108 adc=23.08
     {     397,       290     }, // r=   117 adc=24.83
@@ -759,8 +759,8 @@ const short temptable_12[][2] PROGMEM = {
 };
 #endif
 
-#if (THERMISTORHEATER_0 == 13) || (THERMISTORHEATER_1 == 13) || (THERMISTORHEATER_2 == 13) || (THERMISTORBED == 13) // Epcos B57861S 104F 40 100K on Mendel90 bed, max temp 115
-const short temptable_13[][2] PROGMEM = {
+#if (THERMISTORHEATER_0 == 31) || (THERMISTORHEATER_1 == 31) || (THERMISTORHEATER_2 == 31) || (THERMISTORBED == 31) // Epcos B57861S 104F 40 100K on Mendel90 bed, max temp 115
+const short temptable_31[][2] PROGMEM = {
     {     982,       200     }, // r=   300 adc=61.38
     {    1091,       195     }, // r=   336 adc=68.19
     {    1214,       190     }, // r=   376 adc=75.84

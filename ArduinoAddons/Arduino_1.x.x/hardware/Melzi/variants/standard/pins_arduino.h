@@ -50,9 +50,10 @@
 #define TIMER4A 11
 #define TIMER4B 12
 #define TIMER4C 13
-#define TIMER5A 14
-#define TIMER5B 15
-#define TIMER5C 16
+#define TIMER4D 14
+#define TIMER5A 15
+#define TIMER5B 16
+#define TIMER5C 17
 
 const static uint8_t SS   = 4;
 const static uint8_t MOSI = 5;
@@ -110,7 +111,7 @@ static const uint8_t A7 = 24;
 //
 #define NUM_DIGITAL_PINS            24
 #define NUM_ANALOG_INPUTS           8
-#define analogInputToDigitalPin(p)  ((p < NUM_ANALOG_INPUTS) ? (p) + 24 : -1)
+#define analogInputToDigitalPin(p)  ((p < NUM_ANALOG_INPUTS) ? 31 - (p) : -1)
 
 #define digitalPinHasPWM(p)         ((p) == 3 || (p) == 4 || (p) == 12 || (p) == 13 || (p) == 14 || (p) == 15 )
 

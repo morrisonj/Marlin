@@ -486,7 +486,7 @@ static void lcd_implementation_status_screen()
     lcd.setCursor(LCD_WIDTH - 8, 1);
     lcd.print('Z');
   #endif //BED_CENTER_AT_0_0
-    lcd.print(ftostr32(current_position[Z_AXIS]));
+    lcd.print(ftostr32(current_position[Z_AXIS] + 0.00001));
 #endif//LCD_HEIGHT > 2
 
 #if LCD_HEIGHT > 3

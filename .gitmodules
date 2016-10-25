@@ -1,0 +1,3 @@
+[submodule "ArduinoAddons/libraries/LiquidTWI2"]
+	path = ArduinoAddons/libraries/LiquidTWI2
+	url = http://github.com/lincomatic/LiquidTWI2.git

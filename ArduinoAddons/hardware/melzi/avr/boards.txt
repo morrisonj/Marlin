@@ -1,0 +1,21 @@
+melzi_hybrid.name=Melzi 1.0/2.0 hybrid
+
+melzi_hybrid.upload.maximum_size=129024
+melzi_hybrid.upload.protocol=arduino
+melzi_hybrid.upload.speed=57600
+melzi_hybrid.upload.tool=arduino:avrdude
+
+melzi_hybrid.bootloader.low_fuses=0xD6
+melzi_hybrid.bootloader.high_fuses=0xD4
+melzi_hybrid.bootloader.extended_fuses=0xFD
+melzi_hybrid.bootloader.lock_bits=0x0F
+melzi_hybrid.bootloader.unlock_bits=0x3F
+melzi_hybrid.bootloader.path=atmegaboot
+melzi_hybrid.bootloader.file=ATmegaBOOT_1284P.hex
+melzi_hybrid.bootloader.tool=arduino:avrdude
+
+melzi_hybrid.build.board=MELZI_HYBRID
+melzi_hybrid.build.mcu=atmega1284p
+melzi_hybrid.build.f_cpu=16000000L
+melzi_hybrid.build.core=arduino:arduino
+melzi_hybrid.build.variant=standard
